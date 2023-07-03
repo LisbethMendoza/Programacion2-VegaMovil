@@ -1,0 +1,20 @@
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\bin\Debug\Venta_Vehiculos.exe.config
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\bin\Debug\Venta_Vehiculos.exe
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\bin\Debug\Venta_Vehiculos.pdb
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.csproj.AssemblyReference.cache
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.Properties.Resources.resources
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.csproj.GenerateResource.cache
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.csproj.CoreCompileInputs.cache
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.exe
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.pdb
+C:\C# trabajos\Programacion2-VegaMovil\VegaMovil\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.Form1.resources
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\bin\Debug\Venta_Vehiculos.exe.config
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\bin\Debug\Venta_Vehiculos.exe
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\bin\Debug\Venta_Vehiculos.pdb
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.csproj.AssemblyReference.cache
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.Form1.resources
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.Properties.Resources.resources
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.csproj.GenerateResource.cache
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.csproj.CoreCompileInputs.cache
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.exe
+C:\Users\wilbe\Desktop\VegaMovil_1\Venta_Vehiculos\obj\Debug\Venta_Vehiculos.pdb
