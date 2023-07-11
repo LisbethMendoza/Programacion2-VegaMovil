@@ -106,5 +106,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaNegocioVenta_Vehiculo\CapaNegocioVenta_Vehiculo.csproj">
+      <Project>{8a3cf563-d176-499a-9044-36d2589536be}</Project>
+      <Name>CapaNegocioVenta_Vehiculo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

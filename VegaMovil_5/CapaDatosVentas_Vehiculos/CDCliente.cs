@@ -104,7 +104,7 @@ namespace CapaDatosVentas_Vehiculos
                 micomando.Parameters.AddWithValue("@ptipo_cliente", objCliente.tipo_documento);
                 micomando.Parameters.AddWithValue("@pdocumentoid", objCliente.documento);
                 micomando.Parameters.AddWithValue("@pdireccion", objCliente.direccion);
-                micomando.Parameters.AddWithValue("@ptelefono", objCliente.direccion);
+                micomando.Parameters.AddWithValue("@ptelefono", objCliente.telefono);
                 micomando.Parameters.AddWithValue("@pmovil", objCliente.movil);
                 micomando.Parameters.AddWithValue("@pestado", objCliente.estado);
 
