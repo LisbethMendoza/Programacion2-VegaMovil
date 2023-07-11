@@ -164,7 +164,7 @@ namespace CapaDatosVentas_Vehiculos
 
         //consultation
 
-        public static DataTable ConsultationUsuario(string datos)
+        public static DataTable ConsultationSolicitud_Detalle(string datos)
         {
             DataTable tabla = new DataTable();
             SqlDataReader Lector;

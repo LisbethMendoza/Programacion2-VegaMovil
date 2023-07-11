@@ -11,76 +11,76 @@ using System.Data.SqlTypes;
 
 namespace CapaDatosVentas_Vehiculos
 {
-    class CDVehiculo
+       public class CDVehiculo
     {
-        private int idVehiculo;
-        private string marca, modelo, año, color, locacion, estado;
-        private decimal precio;
+        private int didVehiculo;
+        private string dmarca, dmodelo, daño, dcolor, dlocacion, destado;
+        private decimal dprecio;
 
         public CDVehiculo()
         {
         }
 
-        public CDVehiculo(int idVehiculo, string marca, string modelo, string año, decimal precio, string color, string locacion, string estado)
+        public CDVehiculo(int pidVehiculo, string pmarca, string pmodelo, string paño, decimal pprecio, string pcolor, string plocacion, string pestado)
         {
-            this.idVehiculo = idVehiculo;
-            this.marca = marca;
-            this.modelo = modelo;
-            this.año = año;
-            this.precio = precio;
-            this.color = color;
-            this.locacion = locacion;
-            this.estado = estado;
+            this.didVehiculo = pidVehiculo;
+            this.dmarca = pmarca;
+            this.dmodelo = pmodelo;
+            this.daño = paño;
+            this.dprecio = pprecio;
+            this.dcolor = pcolor;
+            this.dlocacion = plocacion;
+            this.destado = pestado;
         }
 
         #region Propiedades
 
-        public int IdVehiculo
+        public int Idvehiculo
         {
-            get { return idVehiculo; }
-            set { idVehiculo = value; }
+            get { return didVehiculo; }
+            set { didVehiculo = value; }
         }
 
-        public string Marca
+        public string marca
         {
-            get { return marca; }
-            set { marca = value; }
+            get { return dmarca; }
+            set { dmarca = value; }
         }
 
-        public string Modelo
+        public string modelo
         {
-            get { return modelo; }
-            set { modelo = value; }
+            get { return dmodelo; }
+            set { dmodelo = value; }
         }
 
-        public string Año
+        public string año
         {
-            get { return año; }
-            set { año = value; }
+            get { return daño; }
+            set { daño = value; }
         }
 
-        public decimal Precio
+        public decimal precio
         {
-            get { return precio; }
-            set { precio = value; }
+            get { return dprecio; }
+            set { dprecio = value; }
         }
 
-        public string Color
+        public string color
         {
-            get { return color; }
-            set { color = value; }
+            get { return dcolor; }
+            set { dcolor = value; }
         }
 
-        public string Locacion
+        public string locacion
         {
-            get { return locacion; }
-            set { locacion = value; }
+            get { return dlocacion; }
+            set { dlocacion = value; }
         }
 
-        public string Estado
+        public string estado
         {
-            get { return estado; }
-            set { estado = value; }
+            get { return destado; }
+            set { destado = value; }
         }
 
         #endregion
@@ -102,13 +102,13 @@ namespace CapaDatosVentas_Vehiculos
                 micomando.CommandType = CommandType.StoredProcedure;
 
 
-                micomando.Parameters.AddWithValue("@pmarca", objVehiculo.Marca);
-                micomando.Parameters.AddWithValue("@pmodelo", objVehiculo.Modelo);
-                micomando.Parameters.AddWithValue("@paño", objVehiculo.Año);
-                micomando.Parameters.AddWithValue("@pprecio", objVehiculo.Precio);
-                micomando.Parameters.AddWithValue("@pcolor", objVehiculo.Color);
-                micomando.Parameters.AddWithValue("@plocacion", objVehiculo.Locacion);
-                micomando.Parameters.AddWithValue("@pestado", objVehiculo.Estado);
+                micomando.Parameters.AddWithValue("@pmarca", objVehiculo.marca);
+                micomando.Parameters.AddWithValue("@pmodelo", objVehiculo.modelo);
+                micomando.Parameters.AddWithValue("@paño", objVehiculo.año);
+                micomando.Parameters.AddWithValue("@pprecio", objVehiculo.precio);
+                micomando.Parameters.AddWithValue("@pcolor", objVehiculo.color);
+                micomando.Parameters.AddWithValue("@plocacion", objVehiculo.locacion);
+                micomando.Parameters.AddWithValue("@pestado", objVehiculo.estado);
 
                 SqlParameter paramIdVehiculo = new SqlParameter("@pidvehiculo", SqlDbType.Int);
                 paramIdVehiculo.Direction = ParameterDirection.Output;
@@ -117,7 +117,7 @@ namespace CapaDatosVentas_Vehiculos
                 micomando.ExecuteNonQuery();
 
                 int nuevoIdVehiculo = Convert.ToInt32(paramIdVehiculo.Value);
-                objVehiculo.IdVehiculo = nuevoIdVehiculo;
+                objVehiculo.Idvehiculo = nuevoIdVehiculo;
 
                 mensaje = "Inserción de datos completada correctamente! Nuevo ID de vehículo: " + nuevoIdVehiculo;
             }
@@ -146,14 +146,14 @@ namespace CapaDatosVentas_Vehiculos
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                micomando.Parameters.AddWithValue("@pidvehiculo", objVehiculo.IdVehiculo);
-                micomando.Parameters.AddWithValue("@pmarca", objVehiculo.Marca);
-                micomando.Parameters.AddWithValue("@pmodelo", objVehiculo.Modelo);
-                micomando.Parameters.AddWithValue("@paño", objVehiculo.Año);
-                micomando.Parameters.AddWithValue("@pprecio", objVehiculo.Precio);
-                micomando.Parameters.AddWithValue("@pcolor", objVehiculo.Color);
-                micomando.Parameters.AddWithValue("@plocacion", objVehiculo.Locacion);
-                micomando.Parameters.AddWithValue("@pestado", objVehiculo.Estado);
+                micomando.Parameters.AddWithValue("@pidvehiculo", objVehiculo.Idvehiculo);
+                micomando.Parameters.AddWithValue("@pmarca", objVehiculo.marca);
+                micomando.Parameters.AddWithValue("@pmodelo", objVehiculo.modelo);
+                micomando.Parameters.AddWithValue("@paño", objVehiculo.año);
+                micomando.Parameters.AddWithValue("@pprecio", objVehiculo.precio);
+                micomando.Parameters.AddWithValue("@pcolor", objVehiculo.color);
+                micomando.Parameters.AddWithValue("@plocacion", objVehiculo.locacion);
+                micomando.Parameters.AddWithValue("@pestado", objVehiculo.estado);
 
                 micomando.ExecuteNonQuery();
 
@@ -172,7 +172,7 @@ namespace CapaDatosVentas_Vehiculos
             return mensaje;
         }
 
-        public DataTable ConsultarVehiculo(string miParametro)
+        public DataTable ConsultationVehiculo(string miParametro)
         {
             DataTable dt = new DataTable();
             SqlDataReader leerDatos;

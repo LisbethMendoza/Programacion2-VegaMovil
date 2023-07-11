@@ -10,10 +10,10 @@ using System.Data.Sql;
 
 namespace CapaDatosVentas_Vehiculos
 {
-    class CDSolicitud_Cabecera
+        public class CDSolicitud_Cabecera
     {
-        private int idSolicitud, idUsuario, idCliente;
-        private string estadoSolicitud, fechaSolicitud, tipoSolicitud, metodoPago;
+        private int didsolicitud, didusuario, didcliente;
+        private string destadosolicitud, dfechasolicitud, dtiposolicitud, dmetodopago;
 
         public CDSolicitud_Cabecera()
         {
@@ -22,57 +22,57 @@ namespace CapaDatosVentas_Vehiculos
 
         public CDSolicitud_Cabecera(int idSolicitud, int idUsuario, int idCliente, string estadoSolicitud, string fechaSolicitud, string tipoSolicitud, string metodoPago)
         {
-            this.idSolicitud = idSolicitud;
-            this.idUsuario = idUsuario;
-            this.idCliente = idCliente;
-            this.estadoSolicitud = estadoSolicitud;
-            this.fechaSolicitud = fechaSolicitud;
-            this.tipoSolicitud = tipoSolicitud;
-            this.metodoPago = metodoPago;
+            this.didsolicitud = idSolicitud;
+            this.didusuario = idUsuario;
+            this.didcliente = idCliente;
+            this.destadosolicitud = estadoSolicitud;
+            this.dfechasolicitud = fechaSolicitud;
+            this.dtiposolicitud = tipoSolicitud;
+            this.dmetodopago = metodoPago;
         }
 
         #region Propiedades
 
-        public int IdSolicitud
+        public int idsolicitud
         {
-            get { return idSolicitud; }
-            set { idSolicitud = value; }
+            get { return didsolicitud; }
+            set { didsolicitud = value; }
         }
 
-        public int IdUsuario
+        public int idusuario
         {
-            get { return idUsuario; }
-            set { idUsuario = value; }
+            get { return didusuario; }
+            set { didusuario = value; }
         }
 
-        public int IdCliente
+        public int idcliente
         {
-            get { return idCliente; }
-            set { idCliente = value; }
+            get { return didcliente; }
+            set { didcliente = value; }
         }
 
-        public string EstadoSolicitud
+        public string estadosolicitud
         {
-            get { return estadoSolicitud; }
-            set { estadoSolicitud = value; }
+            get { return destadosolicitud; }
+            set { destadosolicitud = value; }
         }
 
-        public string FechaSolicitud
+        public string fechasolicitud
         {
-            get { return fechaSolicitud; }
-            set { fechaSolicitud = value; }
+            get { return dfechasolicitud; }
+            set { dfechasolicitud = value; }
         }
 
-        public string TipoSolicitud
+        public string tiposolicitud
         {
-            get { return tipoSolicitud; }
-            set { tipoSolicitud = value; }
+            get { return dtiposolicitud; }
+            set { dtiposolicitud = value; }
         }
 
-        public string MetodoPago
+        public string metodopago
         {
-            get { return metodoPago; }
-            set { metodoPago = value; }
+            get { return dmetodopago; }
+            set { dmetodopago = value; }
         }
 
         #endregion
@@ -90,12 +90,12 @@ namespace CapaDatosVentas_Vehiculos
                 SqlCommand insert = new SqlCommand("InsertarSolicitud_Cabecera", conec);
                 insert.CommandType = CommandType.StoredProcedure;
 
-                insert.Parameters.AddWithValue("@pidusuario", objCDC.IdUsuario);
-                insert.Parameters.AddWithValue("@pidcliente", objCDC.IdCliente);
-                insert.Parameters.AddWithValue("@pestado_solicitud", objCDC.EstadoSolicitud);
-                insert.Parameters.AddWithValue("@pfecha_solicitud", objCDC.FechaSolicitud);
-                insert.Parameters.AddWithValue("@ptipo_solicitud", objCDC.TipoSolicitud);
-                insert.Parameters.AddWithValue("@pmetodo_de_pago", objCDC.MetodoPago);
+                insert.Parameters.AddWithValue("@pidusuario", objCDC.idusuario);
+                insert.Parameters.AddWithValue("@pidcliente", objCDC.idcliente);
+                insert.Parameters.AddWithValue("@pestado_solicitud", objCDC.estadosolicitud);
+                insert.Parameters.AddWithValue("@pfecha_solicitud", objCDC.fechasolicitud);
+                insert.Parameters.AddWithValue("@ptipo_solicitud", objCDC.tiposolicitud);
+                insert.Parameters.AddWithValue("@pmetodo_de_pago", objCDC.metodopago);
 
                 SqlParameter paramIdSolicitud = new SqlParameter("@pidsolicitud", SqlDbType.Int);
                 paramIdSolicitud.Direction = ParameterDirection.Output;
@@ -105,7 +105,7 @@ namespace CapaDatosVentas_Vehiculos
                 insert.ExecuteNonQuery();
 
                 int nuevaIdSolicitud = Convert.ToInt32(paramIdSolicitud.Value);
-                objCDC.IdSolicitud = nuevaIdSolicitud;
+                objCDC.idsolicitud = nuevaIdSolicitud;
 
                 mensaje = "Solicitud insertada correctamente. Nuevo ID de solicitud: " + nuevaIdSolicitud;
             }
@@ -137,13 +137,13 @@ namespace CapaDatosVentas_Vehiculos
                 SqlCommand update = new SqlCommand("UpdateSolicitud_Cabecera", conec);
                 update.CommandType = CommandType.StoredProcedure;
 
-                update.Parameters.AddWithValue("@pidsolicitud", objCDC.IdSolicitud);
-                update.Parameters.AddWithValue("@pidusuario", objCDC.IdUsuario);
-                update.Parameters.AddWithValue("@pidcliente", objCDC.IdCliente);
-                update.Parameters.AddWithValue("@pestado_solicitud", objCDC.EstadoSolicitud);
-                update.Parameters.AddWithValue("@pfecha_solicitud", objCDC.FechaSolicitud);
-                update.Parameters.AddWithValue("@ptipo_solicitud", objCDC.TipoSolicitud);
-                update.Parameters.AddWithValue("@pmetodo_de_pago", objCDC.MetodoPago);
+                update.Parameters.AddWithValue("@pidsolicitud", objCDC.idsolicitud);
+                update.Parameters.AddWithValue("@pidusuario", objCDC.idusuario);
+                update.Parameters.AddWithValue("@pidcliente", objCDC.idcliente);
+                update.Parameters.AddWithValue("@pestado_solicitud", objCDC.estadosolicitud);
+                update.Parameters.AddWithValue("@pfecha_solicitud", objCDC.fechasolicitud);
+                update.Parameters.AddWithValue("@ptipo_solicitud", objCDC.tiposolicitud);
+                update.Parameters.AddWithValue("@pmetodo_de_pago", objCDC.metodopago);
 
                 conec.Open();
                 update.ExecuteNonQuery();
