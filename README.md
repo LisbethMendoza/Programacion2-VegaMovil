@@ -1,4 +1,5 @@
 # Programacion2-VegaMovil
-Lisbeth Mendoza
-Wilber Alejo 
-Jefferson Hidalgo
+
+Parcial Programacion2
+Lisbeth Mendoza Almanzar
+Jefferson Hidalgo Abreu
