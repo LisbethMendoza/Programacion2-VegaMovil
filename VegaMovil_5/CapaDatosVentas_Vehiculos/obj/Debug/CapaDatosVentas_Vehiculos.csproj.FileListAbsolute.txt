@@ -1,0 +1,8 @@
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\bin\Debug\BDVenta_Vehiculos.mdf
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\bin\Debug\BDVenta_Vehiculos_log.ldf
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\bin\Debug\CapaDatosVentas_Vehiculos.dll
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\bin\Debug\CapaDatosVentas_Vehiculos.pdb
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\obj\Debug\CapaDatosVentas_Vehiculos.csproj.AssemblyReference.cache
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\obj\Debug\CapaDatosVentas_Vehiculos.csproj.CoreCompileInputs.cache
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\obj\Debug\CapaDatosVentas_Vehiculos.dll
+C:\VegaMovil_5\CapaDatosVentas_Vehiculos\obj\Debug\CapaDatosVentas_Vehiculos.pdb
