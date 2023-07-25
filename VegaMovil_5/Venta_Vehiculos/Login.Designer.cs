@@ -34,10 +34,11 @@ namespace Venta_Vehiculos
             this.label3 = new System.Windows.Forms.Label();
             this.contraseña = new System.Windows.Forms.TextBox();
             this.usuario = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ingresar
@@ -87,15 +88,6 @@ namespace Venta_Vehiculos
             this.usuario.Size = new System.Drawing.Size(177, 20);
             this.usuario.TabIndex = 5;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Venta_Vehiculos.Properties.Resources.logo_solooo;
-            this.pictureBox1.Location = new System.Drawing.Point(104, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 83);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightGray;
@@ -112,18 +104,38 @@ namespace Venta_Vehiculos
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vega Movil";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(609, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Venta_Vehiculos.Properties.Resources.logo_solooo;
+            this.pictureBox1.Location = new System.Drawing.Point(104, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 83);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,8 +147,9 @@ namespace Venta_Vehiculos
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox contraseña;
         private System.Windows.Forms.TextBox usuario;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

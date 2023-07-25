@@ -73,6 +73,12 @@ namespace Venta_Vehiculos
                 MessageBox.Show("Usuario no registrado.", "Mensaje Vega Movil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Consultar_Usuarios Usu = new Consultar_Usuarios();
+            Usu.Show();
+        }
     }
 }
 

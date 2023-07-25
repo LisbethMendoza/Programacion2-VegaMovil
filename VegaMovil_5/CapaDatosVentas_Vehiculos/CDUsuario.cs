@@ -10,7 +10,8 @@ using System.Data.Sql;
 
 namespace CapaDatosVentas_Vehiculos
 {
-    public class CDUsuario {
+    public class CDUsuario
+    {
 
         private int dIdusuario;
         private string dNombre_usu, dcontrasenia, dprivilegio, destado;
@@ -60,7 +61,7 @@ namespace CapaDatosVentas_Vehiculos
             set { destado = value; }
         }
         #endregion
-        
+
 
         //Insertar
 
@@ -84,15 +85,16 @@ namespace CapaDatosVentas_Vehiculos
                 insert.Parameters.AddWithValue("@estado", objusuario.estado);
                 mensaje = insert.ExecuteNonQuery() == 1 ? "Insercion de datos completada correctamente!" :
                     "No se pudo insertar correctamente los nuevos datos!";
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 mensaje = e.Message;
             }
             finally
             {
                 if (sqlCon.State == ConnectionState.Open)
-                { 
-                    sqlCon.Close(); 
+                {
+                    sqlCon.Close();
                 }
             }
 
@@ -152,6 +154,30 @@ namespace CapaDatosVentas_Vehiculos
                 consultation.CommandType = CommandType.StoredProcedure;
 
                 consultation.Parameters.AddWithValue("@pvalor", nombreUsuario);
+                Lector = consultation.ExecuteReader();
+                tabla.Load(Lector);
+                consultation.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                tabla = null;
+            }
+            return tabla;
+        }
+
+        public static DataTable ConsultarUsuarios(int IDUsuario, string NombreUsuario)
+        {
+            DataTable tabla = new DataTable();
+            SqlDataReader Lector;
+            try
+            {
+                SqlCommand consultation = new SqlCommand();
+                consultation.Connection = new Conexion().dbconexion;
+                consultation.Connection.Open();
+                consultation.CommandText = "ConsultationUsuario"; // The name of your stored procedure
+                consultation.CommandType = CommandType.StoredProcedure;
+
+                consultation.Parameters.AddWithValue("@pvalor", NombreUsuario);
                 Lector = consultation.ExecuteReader();
                 tabla.Load(Lector);
                 consultation.Connection.Close();
