@@ -49,7 +49,14 @@ namespace CapaNegocioVenta_Vehiculo
             return dt;
         }
 
-        
+        public  DataTable ObtenerUsuarioconsulta(int IDUsuario, string NombreUsuario)
+        {
+            CDUsuario objUsuario = new CDUsuario();
+            DataTable dt = new DataTable();
+            dt = CDUsuario.ConsultarUsuarios(IDUsuario, NombreUsuario);
+
+            return dt;
+        }
     }
 }
 

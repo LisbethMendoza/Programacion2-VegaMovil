@@ -67,6 +67,17 @@
     <Compile Include="administrador.Designer.cs">
       <DependentUpon>administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="BDVenta_VehiculosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDVenta_VehiculosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar_Usuarios.Designer.cs">
+      <DependentUpon>Consultar_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +86,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,22 +100,30 @@
     <EmbeddedResource Include="administrador.resx">
       <DependentUpon>administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultar_Usuarios.resx">
+      <DependentUpon>Consultar_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="vendedor.resx">
       <DependentUpon>vendedor.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BDVenta_VehiculosDataSet1.xsc">
+      <DependentUpon>BDVenta_VehiculosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDVenta_VehiculosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDVenta_VehiculosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDVenta_VehiculosDataSet1.xss">
+      <DependentUpon>BDVenta_VehiculosDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
